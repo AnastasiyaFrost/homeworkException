@@ -9,17 +9,13 @@ public class LoginService {
         if (isValidChar(string) && string.length() <= 20 &&
                 !string.startsWith(String.valueOf(0-9))) {
             return true;
-        } else {
-            throw new WrongLoginException();
-        }
+        } else {throw new WrongLoginException();}
     }
     public boolean isPasswordTrue (String string) {
         if (isValidChar(string) && string.length() <= 20 &&
                 !string.startsWith(String.valueOf(0-9))) {
             return true;
-        } else {
-            throw new WrongPasswordException();
-        }
+        } else {throw new WrongPasswordException();}
     }
 
     public boolean isConfirmPasswordTrue (String userPassword, String confirmPassword) {
